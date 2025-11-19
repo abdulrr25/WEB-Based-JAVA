@@ -13,4 +13,12 @@ public interface ProductDao {
 
 	void closeConnection();
 
+	Product findById(int id);
+
+	boolean modifyById(int id, int qty, double price);
+
+	boolean deletebyId(int id);
+
+	List<Product> sortByPrice();
+
 }

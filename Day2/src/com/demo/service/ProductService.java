@@ -13,4 +13,12 @@ public interface ProductService {
 
 	void CloseConnection();
 
+	Product findById(int id);
+
+	boolean modifyById(int id, int qty, double price);
+
+	boolean deletebyId(int id);
+
+	List<Product> sortByPrice();
+
 }

@@ -30,11 +30,57 @@ public class TestProductManagement {
 				}
 			}
 			
+			case 2->{
+				System.out.println("Enter id: ");
+				int id=sc.nextInt();
+				boolean status=pservice.deletebyId(id);
+				if(status) {
+					System.out.println("Deleted successfully");
+				}else {
+					System.out.println("Not Found");
+				}
+			}
 			
+			case 3->{
+				System.out.println("enter id");
+				int id=sc.nextInt();
+				System.out.println("enter qty");
+				int qty=sc.nextInt();
+				System.out.println("enter price");
+				double price=sc.nextDouble();
+				boolean status=pservice.modifyById(id,qty,price);
+				if(status) {
+					System.out.println("product updated successfully");
+				}else {
+					System.out.println("Not updated");
+				}
+			}
 			
+			case 4->{
+				System.out.println("Enter the id ");
+				int id = sc.nextInt();
+				Product p = pservice.findById(id);
+				if(p!=null) {
+					
+				System.out.println(p);
+				}
+				else {
+					System.out.println("Not found");
+				}
+			}
 			case 5->{
 				List<Product> plist = pservice.showAllProduct();
 				plist.forEach(System.out::println);
+			}
+			case 6->{
+				List<Product> plist =pservice.sortByPrice();
+				if(plist!=null) {
+					
+				plist.forEach(System.out::println);
+				}
+				else {
+					System.out.println("No Value Found");
+				}
 			}
 			case 7->{
 				sc.close();

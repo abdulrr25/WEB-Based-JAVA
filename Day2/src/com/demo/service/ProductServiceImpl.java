@@ -45,4 +45,29 @@ public class ProductServiceImpl implements ProductService {
 		pdao.closeConnection();
 	}
 
+	@Override
+	public Product findById(int id) {
+		// TODO Auto-generated method stub
+		return pdao.findById(id);
+	}
+
+	@Override
+	public boolean modifyById(int id, int qty, double price) {
+		// TODO Auto-generated method stub
+		return pdao.modifyById(id,qty,price);
+	}
+
+	@Override
+	public boolean deletebyId(int id) {
+		// TODO Auto-generated method stub
+		return pdao.deletebyId(id);
+		
+	}
+
+	@Override
+	public List<Product> sortByPrice() {
+		// TODO Auto-generated method stub
+		return pdao.sortByPrice();
+	}
+
 }
