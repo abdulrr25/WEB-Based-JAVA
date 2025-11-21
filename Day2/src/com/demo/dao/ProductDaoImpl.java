@@ -22,7 +22,7 @@ public class ProductDaoImpl implements ProductDao {
 			findProd=conn.prepareStatement("select * from myproduct");
 			findId = conn.prepareStatement("select * from myproduct where pid = ?");
 			updateById=conn.prepareStatement("update myproduct set qty=?,price=? where pid=?");
-			deleteId=conn.prepareStatement("Delete * from myproduct where pid=?");
+			deleteId=conn.prepareStatement("Delete from myproduct where pid=?");
 			sortByPrice=conn.prepareStatement("select * from myproduct order by price");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
