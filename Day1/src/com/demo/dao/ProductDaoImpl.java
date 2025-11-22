@@ -17,7 +17,7 @@ public class ProductDaoImpl implements ProductDao {
     static {
     	
     	try {
-    		conn=DBUtil.GetConnetion();
+    		conn=DBUtil.getMyConnection();
 			insProd=conn.prepareStatement("insert into myproduct values(?,?,?,?,?)");
 			findProd=conn.prepareStatement("select * from myproduct");
 		} catch (SQLException e) {
@@ -79,7 +79,7 @@ public class ProductDaoImpl implements ProductDao {
 	@Override
 	public void closeConnection() {
 		// TODO Auto-generated method stub
-		DBUtil.closeConnection();
+		DBUtil.closeMyConnection();
 		
 	}
 	
