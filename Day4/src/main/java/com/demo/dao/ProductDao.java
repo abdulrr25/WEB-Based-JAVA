@@ -10,4 +10,10 @@ public interface ProductDao {
 
 	List<Product> showAllproducts();
 
+	Product findById(int pid);
+
+	boolean deleteById(int pid);
+
+	boolean UpdateById(Product p);
+
 }

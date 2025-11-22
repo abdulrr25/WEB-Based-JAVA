@@ -15,7 +15,7 @@ import com.demo.service.ProductService;
 import com.demo.service.ProductServiceImpl;
 
 @WebServlet("/showproduct")
-public class ShowProduct extends HttpServlet {
+public class ShowProd extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");

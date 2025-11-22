@@ -27,4 +27,25 @@ public class ProductServiceImpl implements ProductService{
 		return pdao.showAllproducts();
 	}
 
+
+	@Override
+	public Product getById(int pid) {
+		// TODO Auto-generated method stub
+		return pdao.findById(pid);
+	}
+
+
+	@Override
+	public boolean deleteById(int pid) {
+		// TODO Auto-generated method stub
+		return pdao.deleteById(pid);
+	}
+
+
+	@Override
+	public boolean updateproduct(Product p) {
+		// TODO Auto-generated method stub
+		return pdao.UpdateById(p);
+	}
+
 }
