@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.demo.bean.MyUser;
 import com.demo.bean.Product;
 
 public class ProductDaoImpl implements ProductDao{
@@ -20,7 +21,7 @@ public class ProductDaoImpl implements ProductDao{
 			selbyId=conn.prepareStatement("select * from product1 where pid = ?");
 			delById=conn.prepareStatement("delete from product1 where pid = ?");
 			updateById=conn.prepareStatement("update product1 set pname=?,qty=?,price=?,expdate=?,cid=? where pid=?");
-
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -122,5 +123,7 @@ public class ProductDaoImpl implements ProductDao{
 		}
 		return false;
 	}
+
+	
 
 }

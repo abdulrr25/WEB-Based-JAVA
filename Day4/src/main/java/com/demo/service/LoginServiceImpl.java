@@ -15,4 +15,16 @@ public class LoginServiceImpl implements LoginService{
 public MyUser validateUSer(String uname, String pass) {
 	return ldao.checkUser(uname,pass);
 }
+
+@Override
+public boolean register(MyUser user) {
+	// TODO Auto-generated method stub
+	return ldao.register(user);
+}
+
+@Override
+public boolean forgot(String email, String pass) {
+	// TODO Auto-generated method stub
+	return ldao.forgot(email,pass);
+}
 }

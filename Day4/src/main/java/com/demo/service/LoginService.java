@@ -6,4 +6,8 @@ public interface LoginService {
 
 	MyUser validateUSer(String uname, String pass);
 
+	boolean register(MyUser user);
+
+	boolean forgot(String email, String pass);
+
 }

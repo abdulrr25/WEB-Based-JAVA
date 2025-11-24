@@ -2,6 +2,7 @@ package com.demo.service;
 
 import java.util.List;
 
+import com.demo.bean.MyUser;
 import com.demo.bean.Product;
 
 public interface ProductService {
@@ -15,5 +16,6 @@ public interface ProductService {
 	boolean deleteById(int pid);
 
 	boolean updateproduct(Product p);
+
 
 }
