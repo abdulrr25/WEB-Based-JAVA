@@ -29,7 +29,7 @@ public class forgotpassword extends HttpServlet {
 			RequestDispatcher rd=request.getRequestDispatcher("Login.html");
 			rd.forward(request, response);
 		}else {
-			out.print("<h1>Invalid credentials</h1>");
+			out.print("<h1>Invalid Email</h1>");
 			RequestDispatcher rd=request.getRequestDispatcher("forgotpassword.html");
 			rd.include(request, response);
 			
