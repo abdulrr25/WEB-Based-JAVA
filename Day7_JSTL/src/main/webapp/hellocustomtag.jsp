@@ -15,8 +15,7 @@
 	
 %>
 <h1>Hello we are designing custom tags</h1>
-<hello:myhellotag fname="<%=fname%>" lname="<%=lname %>"></hello:myhellotag>
-<hello:calculatedata num1="${param.num1}" num2="${param.num2} "></hello:calculatedata>
-
+ <hello:myhellotag fname="<%=fname%>" lname="<%=lname%>"></hello:myhellotag> 
+<hello:calculatedata num1="${param.num1}" num2="${param.num2}"></hello:calculatedata>
 </body>
 </html>
