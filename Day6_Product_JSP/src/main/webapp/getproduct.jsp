@@ -30,3 +30,16 @@ Product Quantity: <jsp:getProperty property="qty" name="p"/>
 Product price: <jsp:getProperty property="price" name="p"/>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
