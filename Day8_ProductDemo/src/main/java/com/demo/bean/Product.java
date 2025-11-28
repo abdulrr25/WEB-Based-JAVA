@@ -21,6 +21,15 @@ public class Product {
 		this.expdate = expdate;
 		this.cid = cid;
 	}
+	
+	@Override
+	public int hashCode() {
+		return pid;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		return this.pid==((Product)obj).pid;
+	}
 	public int getPid() {
 		return pid;
 	}

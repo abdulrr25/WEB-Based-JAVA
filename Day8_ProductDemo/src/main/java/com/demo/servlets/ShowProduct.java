@@ -17,10 +17,6 @@ import com.demo.bean.Product;
 import com.demo.service.ProductService;
 import com.demo.service.ProductServiceImpl;
 
-
-/**
- * Servlet implementation class ShowProduct
- */
 @WebServlet("/showproduct")
 public class ShowProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -43,11 +39,7 @@ public class ShowProduct extends HttpServlet {
 			out.println("Invalid user");
 			RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");
 			rd.include(request, response);
-		}
-		
-		
-		
-		doGet(request, response);
+		}		
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
