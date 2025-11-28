@@ -90,6 +90,7 @@ h2 {
 </style>
 </head>
 <body>
+
     <h2>Available Products</h2>
 
     <c:if test="${not empty cart}">
@@ -119,5 +120,6 @@ h2 {
             </div>
         </c:forEach>
     </div>
+
 </body>
 </html>
