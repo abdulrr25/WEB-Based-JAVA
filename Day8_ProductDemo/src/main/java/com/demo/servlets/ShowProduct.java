@@ -20,9 +20,6 @@ import com.demo.service.ProductServiceImpl;
 @WebServlet("/showproduct")
 public class ShowProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-      
-
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");

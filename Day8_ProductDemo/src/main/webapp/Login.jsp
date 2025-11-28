@@ -5,13 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Login</title>
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -63,20 +57,20 @@
         background-color: #0056b3;
     }
 
-    /* Loader overlay */
- .overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(255,255,255,0.7); /* fallback */
-    backdrop-filter: blur(5px);        /* blur effect */
-    -webkit-backdrop-filter: blur(5px); /* Safari support */
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    /* Loader overlay (hidden initially) */
+    .overlay {
+        display: none; /* hidden until form submit */
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
     .spinner {
         border: 8px solid #f3f3f3;
         border-top: 8px solid #007BFF;
@@ -96,20 +90,16 @@
     }
 </style>
 <script>
-function showLoader() {
-    document.getElementById("overlay").style.display = "flex";
-    // simulate delay for testing
-    setTimeout(() => {
-        document.forms[0].submit();
-    }, 2000);
-    return false; // prevent immediate submit
-}
+    function showLoader() {
+        // show overlay only when form is submitted
+        document.getElementById("overlay").style.display = "flex";
+    }
 </script>
 </head>
 <body>
     <div class="login-container">
         <h2>User Login</h2>
-        <form action="validateuser" method="post" onsubmit="return showLoader()">
+        <form action="validateuser" method="post" onsubmit="showLoader()">
             <label for="uname">Username</label>
             <input type="text" id="uname" name="uname" placeholder="Enter username" required />
 
@@ -120,10 +110,10 @@ function showLoader() {
         </form>
     </div>
 
-    <!-- Loader overlay -->
+    <!-- Loader overlay (hidden until submit) -->
     <div id="overlay" class="overlay">
-    <div class="spinner"></div>
-    <div class="loading-text">Logging in, please wait...</div>
-</div>
+        <div class="spinner"></div>
+        <div class="loading-text">Logging in, please wait...</div>
+    </div>
 </body>
 </html>
