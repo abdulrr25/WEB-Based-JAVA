@@ -1,8 +1,10 @@
 package com.demo.beans;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +16,8 @@ public class Address {
    private String street;
    private String city;
    private String pincode;
+   @OneToOne(mappedBy="addr",fetch=FetchType.LAZY)  //mappedBy will not add foreign key
+   private MyUser user1;
    
 public Address() {
 	super();
@@ -26,11 +30,19 @@ public Address(int aid, String street, String city, String pincode) {
 	this.pincode = pincode;
 }
 
+
+public MyUser getUser1() {
+	return user1;
+}
+public void setUser1(MyUser user1) {
+	this.user1 = user1;
+}
 public Address(String street, String city, String pincode) {
 	super();
 	this.street = street;
 	this.city = city;
 	this.pincode = pincode;
+	this.user1=null;
 }
 public int getAid() {
 	return aid;
