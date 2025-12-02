@@ -27,20 +27,20 @@ public class TestMyUserData {
 		session.save(u1);
 		session.save(u3);
 		
-//		Session sessions2=sh.openSession();
-//		Transaction tr1=sessions2.beginTransaction();
-//		System.out.println("Before get");
-//		MyUser u4 = sessions2.get(MyUser.class,1);
-//		System.out.println("After get");
-//		System.out.println(u4);
-		
-		Session session3=sh.openSession();
-		Transaction tr2=session3.beginTransaction();
+		Session sessions2=sh.openSession();
+		Transaction tr1=sessions2.beginTransaction();
 		System.out.println("Before get");
-		MyUser u5=session3.load(MyUser.class, 1);
+		MyUser u4 = sessions2.get(MyUser.class,1);
 		System.out.println("After get");
-		System.out.println(u5);
+		System.out.println(u4);
 		
+//		Session session3=sh.openSession();
+//		Transaction tr2=session3.beginTransaction();
+//		System.out.println("Before get");
+//		MyUser u5=session3.load(MyUser.class, 1);
+//		System.out.println("After get");
+//		System.out.println(u5);
+//		
 		tr.commit();
 		session.close();
 		sh.close();

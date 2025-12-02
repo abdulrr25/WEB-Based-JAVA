@@ -13,12 +13,12 @@ import javax.persistence.Table;
 @Table(name="myuser123")
 public class MyUser {
 	@Id
-	@GeneratedValue
+//	@GeneratedValue
 	private int uid;
 	private String uname;
 	private String mob;
 	@OneToOne(fetch=FetchType.LAZY)
-	Address addr;
+	private Address addr;
 	public MyUser() {
 		super();
 	}

@@ -23,6 +23,7 @@ public class TestMyUserData {
 		session.save(p1);
 		session.save(p2);
 		tr.commit();
+		
 		session.close();
 		sf.close();
 		
