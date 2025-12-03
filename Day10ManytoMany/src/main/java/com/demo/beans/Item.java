@@ -2,12 +2,13 @@ package com.demo.beans;
 
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
-@Table(name="Itemm")
+@Table(name="Itemmm")
 public class Item {
 	
 	@Id
@@ -16,7 +17,7 @@ public class Item {
 	private double price;
 	private String Iname;
 	
-	@ManyToMany(mappedBy="sItem")
+	@ManyToMany(mappedBy="sItem",cascade=CascadeType.ALL)
 	Set<Cart> cset;
 
 	public Item() {
@@ -77,8 +78,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [Item_id=" + Item_id + ", qty=" + qty + ", price=" + price + ", Iname=" + Iname + ", cset=" + cset
-				+ "]";
+		return "Item [Item_id=" + Item_id + ", qty=" + qty + ", price=" + price + ", Iname=" + Iname + "]";
 	}
 	
 

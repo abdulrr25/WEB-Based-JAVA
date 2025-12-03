@@ -14,7 +14,6 @@ import com.demo.beans.Student;
 public class TestCourseData {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		SessionFactory sh=new Configuration().configure().buildSessionFactory();
 		Session session =sh.getCurrentSession();

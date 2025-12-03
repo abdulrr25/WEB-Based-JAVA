@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
-@Table(name="Cartt")
+@Table(name="Carttt")
 public class Cart {
 	
 	@Id
@@ -41,6 +41,12 @@ public class Cart {
 		this.status = status;
 		this.sItem = sItem;
 	}
+
+	public Cart(int cid, LocalDate ldt) {
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	public int getCid() {
 		return cid;

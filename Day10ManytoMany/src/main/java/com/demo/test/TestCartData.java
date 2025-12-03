@@ -30,9 +30,9 @@ public class TestCartData {
 		cset1.add(c2);
 		cset1.add(c3);
 		Set<Cart> cset2=new HashSet<Cart>();
-		cset1.add(c4);
-		cset1.add(c2);
-		cset1.add(c3);
+		cset2.add(c4);
+		cset2.add(c2);
+		cset2.add(c3);
 		
 		Item I1=new Item(32,4,3456,"ABC",cset1);
 		Item I2=new Item(33,2,3456,"XYZ",cset2);
