@@ -1,0 +1,15 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Day12_CriteriaQuery</groupId>
+  <artifactId>Day12_CriteriaQuery</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Day12_CriteriaQuery</name>
+  <description>Day12_CriteriaQuery</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>Day11_CRUD</groupId>
+  		<artifactId>Day11_CRUD</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+</project>

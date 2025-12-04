@@ -3,17 +3,12 @@ package com.demo.test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.demo.beans.Address;
-import com.demo.beans.Faculty;
+import com.demo.beans.Product;
 
-public class TestFacData {
-
+public class TestAnnotationConfig {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("springconfig.xml");
-		Faculty f = (Faculty) ctx.getBean("f1");
-		System.out.println(f);
-//		(ClassPathXmlApplicationContext)ctx).close();
+		Product p=(Product)ctx.getBean("product");
+		System.out.println(p);
 	}
-
 }
