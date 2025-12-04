@@ -6,7 +6,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 @Entity
-@Table(name="NonPerishable")
+@Table(name="NonPerishableee")
 public class NonPerishable extends Product {
 	private int garentee;
 

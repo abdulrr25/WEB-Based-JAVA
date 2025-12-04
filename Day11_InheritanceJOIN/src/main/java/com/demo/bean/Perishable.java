@@ -6,7 +6,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 @Entity
-@Table(name="Perishable")
+@Table(name="Perishableee")
 public class Perishable extends Product {
 	
 	private LocalDate expdate;

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="f1" class="com.demo.beans.Faculty" autowire="byName">
+		<property name="fid" value="12"></property>
+		<property name="fname" value="xxxx"></property>
+		<property name="spskill" ref="spskill"></property>
+		<property name="addr" ref="addr"></property>
+	</bean>
+
+	<bean id="addr" class="com.demo.beans.Address" autowire="byName">
+		<property name="street" value="SBRoad"></property>
+		<property name="city" value="Pune"></property>
+		<property name="pincode" value="3456"></property>
+	</bean>
+	<bean id="spskill" class="com.demo.beans.Skill" scope="prototype">
+   <property name="skill" value="100"></property>
+   <property name="skname" value="Java"></property>
+   <property name="experience" value="12"></property>
+</bean>
+</beans>
