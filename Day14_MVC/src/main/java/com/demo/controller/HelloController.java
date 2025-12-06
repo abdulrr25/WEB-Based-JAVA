@@ -23,7 +23,7 @@ public class HelloController {
 	
 	@GetMapping("/test")
 	public String testdata(Model mymodel) {
-		mymodel.addAttribute("name","avc");
+		mymodel.addAttribute("name","Kishori");
 		mymodel.addAttribute("email","kkk@gmsil.com");
 		return "testdata";  
 		
