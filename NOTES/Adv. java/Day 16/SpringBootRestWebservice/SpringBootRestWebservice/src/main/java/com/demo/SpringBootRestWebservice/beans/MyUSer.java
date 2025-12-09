@@ -1,5 +1,8 @@
 package com.demo.SpringBootRestWebservice.beans;
 
+import jakarta.persistence.Table;
+
+@Table(name="user")
 public class MyUSer {
 	private String uname;
 	private String passwd;
