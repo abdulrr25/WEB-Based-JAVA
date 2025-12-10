@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="insertStudent" method="post">
+<form action="insertStudent" method="get">
 Student Id : <input type="text" name="sid" id="sid"><br>
 Student Name : <input type="text" name="sname" id="sname"><br>
 Student Email : <input type="email" name="email" id="email"><br>
