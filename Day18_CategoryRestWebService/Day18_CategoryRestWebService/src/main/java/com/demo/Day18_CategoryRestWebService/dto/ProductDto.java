@@ -1,6 +1,7 @@
-package com.demo.Day18_ProductRestWebservice.dto;
+package com.demo.Day18_CategoryRestWebService.dto;
 
 public class ProductDto {
+	
 	private int pid;
 	private String pname;
 	private int qty;
@@ -61,4 +62,7 @@ public class ProductDto {
 				+ ldtstr + ", cid=" + cid + "]";
 	}
 	
+	
+	
+
 }
