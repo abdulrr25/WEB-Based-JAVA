@@ -3,4 +3,6 @@
 /bin/
 /.settings/
 /.project/
+/node_modules/
+/node_modules
 /mysql-connector-java-8.0.11/
